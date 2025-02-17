@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incruducan - Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'VT323', monospace;
+        }
+
+        body {
+            background: black;
+            color: #00ff00;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff0000, -2px -2px #00ffff; }
+            50% { text-shadow: -2px -2px #ff0000, 2px 2px #00ffff; }
+            100% { text-shadow: 2px 2px #ff0000, -2px -2px #00ffff; }
+        }
+
+        .info-box {
+            background: rgba(0, 255, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 22px;
+            color: #00ff00;
+            text-decoration: none;
+            background: black;
+            border: 3px solid #00ff00;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 18px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>More Information</h1>
+
+        <div class="info-box">
+            <p>Welcome to <b>Incruducan</b>, the ultimate hacker-style platform. Our goal is to provide cutting-edge cybersecurity knowledge and services.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>🔥 Why Choose Us?</h2>
+            <p>- Advanced cybersecurity techniques</p>
+            <p>- Ethical hacking tools & training</p>
+            <p>- 24/7 support for security solutions</p>
+        </div>
+
+        <div class="info-box">
+            <h2>📡 Our Services</h2>
+            <p>- Social Media Recovery</p>
+            <p>- Cybersecurity Consulting</p>
+            <p>- Bug Bounty & Penetration Testing</p>
+        </div>
+
+        <a href="index.html" class="back-btn">🔙 Back to Home</a>
+
+        <div class="footer">
+            <p>© 2025 Incruducan | Designed by Clay</p>
+        </div>
+    </div>
+
+</body>
+</html>
