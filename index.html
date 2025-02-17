@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incruducan - Hacker Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'VT323', monospace;
+        }
+
+        body {
+            background: black;
+            color: #00ff00;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        .logo {
+            margin-top: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00ff00;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff0000, -2px -2px #00ffff; }
+            50% { text-shadow: -2px -2px #ff0000, 2px 2px #00ffff; }
+            100% { text-shadow: 2px 2px #ff0000, -2px -2px #00ffff; }
+        }
+
+        .btn-container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .btn {
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            font-size: 22px;
+            color: #00ff00;
+            text-decoration: none;
+            background: black;
+            transition: 0.3s;
+            text-align: center;
+            border-radius: 5px;
+            display: block;
+        }
+
+        /* Instagram Button */
+        .btn-instagram {
+            border: 3px solid;
+            border-image-source: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            border-image-slice: 1;
+        }
+
+        /* Telegram Button */
+        .btn-telegram {
+            border: 3px solid #0088cc;
+        }
+
+        /* GitHub Button */
+        .btn-github {
+            border: 3px solid white;
+        }
+
+        /* Hire a Hacker Button */
+        .btn-hacker {
+            border: 3px solid red;
+            color: red;
+        }
+
+        /* More Info Button */
+        .btn-info {
+            border: 3px solid yellow;
+            color: yellow;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 18px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="container">
+        <img src="logo.png" class="logo" alt="Logo">
+        <h1>Clay group 2025</h1>
+
+        <div class="btn-container">
+            <a href="https://instagram.com/h4cker.in" class="btn btn-instagram" target="_blank">1. Instagram</a>
+            <a href="https://t.me/claygroup23" class="btn btn-telegram" target="_blank">2. Telegram</a>
+            <a href="https://github.com/ClayHackerGroup" class="btn btn-github" target="_blank">3. GitHub</a>
+            <a href="https://t.me/claygroup22" class="btn btn-telegram" target="_blank">4. Telegram 2</a>
+            <a href="https://t.me/claygroup22" class="btn btn-hacker" target="_blank">5. Hire a Hacker</a>
+            <a href="info.html" class="btn btn-info">6. More Info</a>
+        </div>
+
+        <div class="footer">
+            <p>| Designed by Clay</p>
+        </div>
+    </div>
+
+    <script>
+        // Matrix Rain Effect
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+        const charArray = characters.split("");
+        const fontSize = 16;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(0);
+
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#00ff00";
+            ctx.font = fontSize + "px VT323";
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = charArray[Math.floor(Math.random() * charArray.length)];
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+
+                ctx.fillText(text, x, y);
+
+                if (y > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 50);
+    </script>
+
+</body>
+</html>
