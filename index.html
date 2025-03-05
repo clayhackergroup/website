@@ -3,794 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay Hacker Group posts</title>
+    <title>Clay Hacker Group Official site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'VT323', monospace;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #15202B;
-            color: #E1E8ED;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: black;
+            color: #00ff00;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
             min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
-            padding: 20px;
+            padding-bottom: 50px;
         }
 
-        .tweet-card {
-            background: #192734;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-        }
-
-        .profile img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .profile h3, .profile p {
-            margin: 0;
-        }
-
-        .tweet-text {
-            font-size: 16px;
-            margin: 15px 0;
-        }
-
-        .tweet-image {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        .security-report {
-            background: #1C2833;
-            padding: 15px;
+        .logo {
             margin-top: 20px;
-            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00ff00;
         }
 
-        .security-report h3 {
-            color: #1DA1F2;
+        h1 {
+            font-size: 50px;
+            margin-top: 10px;
             text-transform: uppercase;
+            animation: glitch 1.5s infinite;
         }
 
-        .footer {
-            margin-top: 20px;
-            text-align: center;
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff0000, -2px -2px #00ffff; }
+            50% { text-shadow: -2px -2px #ff0000, 2px 2px #00ffff; }
+            100% { text-shadow: 2px 2px #ff0000, -2px -2px #00ffff; }
         }
 
-        .footer a {
-            color: #1DA1F2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .tweet-card {
-                padding: 15px;
-            }
-
-            .profile img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .tweet-text {
-                font-size: 14px;
-            }
-
-            .security-report {
-                padding: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="tweet-card">
-        <div class="profile">
-            <img src="https://clayhackergroup.netlify.app/IMG_20240911_141041_910.jpg" alt="Reddit Logo">
-            <div>
-                <h3>Clay Group </h3>
-                <p>@h4cker.in · #security #alert</p>
-            </div>
-        </div>
-        
-        <p class="tweet-text">
-            🚨 Is Reddit safe? **56.3 million user data leaked on the dark web!** 🚨<br>
-            Cybersecurity experts warn about **compromised emails, passwords, and private messages.**  
-            Change your passwords and enable 2FA now! #RedditLeak #CyberSecurity
-        </p>
-
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Reddit_Logo_Icon.svg/800px-Reddit_Logo_Icon.svg.png" alt="Reddit Data Leak" class="tweet-image">
-
-        <div class="security-report">
-            <h3>🚨 Reddit security report - data leak analysis</h3>
-            <p>
-                A recent **dark web data dump** has revealed **56.3 million Reddit accounts** compromised in a **major security breach**.
-                Cybercriminals have leaked **emails, hashed passwords, private messages, and even browsing history**.
-            </p>
-            <p>
-                🔴 **What data was leaked?**  
-                - Usernames & Email Addresses  
-                - Hashed Passwords (potentially cracked)  
-                - Private Messages & Subreddit Activity  
-                - IP Addresses & Account Creation Details  
-            </p>
-            <p>
-                🔴 **How did this happen?**  
-                - **Phishing attacks on Reddit employees**  
-                - **Weak password storage mechanisms**  
-                - **APIs exploited by attackers**
-            </p>
-            <p>
-                🔴 **What can you do?**  
-                ✅ **Change your Reddit password immediately**  
-                ✅ **Enable Two-Factor Authentication (2FA)**  
-                ✅ **Monitor your email for breach alerts**  
-                ✅ **Avoid clicking on suspicious links**  
-            </p>
-            <p>
-                Cybersecurity experts recommend using **a password manager and enabling advanced security settings** 
-                to protect against future breaches.
-            </p>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Follow me on Instagram: <a href="https://www.instagram.com/h4cker.in" target="_blank">@h4cker.in</a></p>
-    </div>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay Hacker Group Post</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #15202B;
-            color: #E1E8ED;
+        .btn-container {
+            margin-top: 30px;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
             flex-direction: column;
-            padding: 20px;
-        }
-
-        .tweet-card {
-            background: #192734;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        .profile {
-            display: flex;
             align-items: center;
+            padding-bottom: 20px;
         }
 
-        .profile img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
+        .btn {
+            width: 270px;
+            margin: 10px;
+            padding: 15px;
+            font-size: 22px;
+            color: #00ff00;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.8);
+            transition: 0.3s;
+            text-align: center;
+            border-radius: 5px;
+            display: block;
+            font-weight: bold;
+            border: 3px solid #00ff00;
         }
 
-        .profile h3, .profile p {
-            margin: 0;
+        /* Instagram Button */
+        .btn-instagram {
+            border-color: #feda75;
+            color: #feda75;
         }
 
-        .tweet-text {
-            font-size: 16px;
-            margin: 15px 0;
+        /* Telegram Button */
+        .btn-telegram {
+            border-color: #0088cc;
+            color: #0088cc;
         }
 
-        .tweet-image {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
+        /* GitHub Button */
+        .btn-github {
+            border-color: white;
+            color: white;
+        }
+
+        /* Hire a Hacker Button */
+        .btn-hacker {
+            border-color: red;
+            color: red;
+        }
+
+        /* More Info Button */
+        .btn-info {
+            border-color: yellow;
+            color: yellow;
+        }
+
+        /* View Posts Button */
+        .btn-posts {
+            border-color: cyan;
+            color: cyan;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 15px #00ff00;
+            transform: scale(1.05);
         }
 
         .footer {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #1DA1F2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .tweet-card {
-                padding: 15px;
-            }
-
-            .profile img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .tweet-text {
-                font-size: 14px;
-            }
+            margin-top: 40px;
+            font-size: 18px;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
 
-    <div class="tweet-card">
-        <div class="profile">
-            <img src="https://clayhackergroup.netlify.app/IMG_20240911_141041_910.jpg" alt="Clay Hacker Group">
-            <div>
-                <h3>Clay Group</h3>
-                <p>@h4cker.in · #security</p>
-            </div>
+    <div class="container">
+        <img src="IMG_20240911_141041_910.jpg" class="logo" alt="Logo">
+        <h1>Clay Group 2025</h1>
+
+        <div class="btn-container">
+            <a href="https://instagram.com/h4cker.in" class="btn btn-instagram" target="_blank">1. Instagram</a>
+            <a href="https://t.me/claysecure23" class="btn btn-telegram" target="_blank">2. Telegram</a>
+            <a href="https://github.com/ClayHackerGroup" class="btn btn-github" target="_blank">3. GitHub</a>
+            <a href="https://t.me/claysecure22" class="btn btn-telegram" target="_blank">4. Telegram 2</a>
+            <a href="https://t.me/claysecure22" class="btn btn-hacker" target="_blank">5. Hire a Hacker</a>
+            <a href="info.html" class="btn btn-info">6. More Info</a>
+            <a href="post.html" class="btn btn-posts">7. View Posts</a>
+            <a href="hservices.html" class="btn btn-hacker">8. Hacking Services</a>
         </div>
-        
-        <p class="tweet-text">
 
-
-    <h1>Apple’s Siri Privacy Settlement: A $95 Million Wake-Up Call on User Data Protection</h1>
-
-    <p>Apple has long been known for its strong stance on privacy, often marketing itself as a company that values user security above all else.  
-    However, a recent $95 million settlement over alleged privacy violations by Siri, Apple’s voice assistant, has raised questions about how well the tech giant truly protects its users’ data.</p>
-    
-    <h1>The Allegations Against Apple</h1>
-
-    <p>The lawsuit, originally filed in 2023, claimed that Siri was recording and storing user conversations without explicit consent.  
-    Plaintiffs alleged that Apple’s voice assistant occasionally activated by mistake, capturing private discussions that were later used for data analysis and improving Siri’s capabilities.</p>
-
-    <p>These recordings reportedly included sensitive personal and professional conversations, raising concerns about user privacy.  
-    According to the lawsuit, Apple misled users by suggesting that Siri only listened when the wake words—such as “Hey Siri”—were used.  
-    However, reports surfaced that Siri sometimes activated accidentally and sent recordings to Apple’s servers without proper user knowledge.</p>
-
-    <h1>Apple’s Response and the Settlement</h1>
-
-    <p>Apple has denied any wrongdoing but agreed to settle the case for $95 million to avoid prolonged litigation.  
-    The company maintains that it does not sell user data and that all Siri interactions are encrypted and anonymized to prevent misuse.</p>
-
-    <p>Despite this, the settlement indicates a recognition of flaws in Siri’s activation process and how data is handled.  
-    The settlement funds will be distributed among affected users, though the eligibility criteria have yet to be fully disclosed.  
-    The lawsuit primarily applies to users who interacted with Siri on Apple devices between 2019 and 2021.</p>
-
-    <h1>Implications for User Privacy</h1>
-
-    <p>This case highlights growing concerns about how tech companies handle voice data.  
-    Virtual assistants like Siri, Amazon Alexa, and Google Assistant rely on machine learning models that require massive amounts of user input to improve.  
-    However, this often leads to unintentional data collection, raising ethical and legal questions.</p>
-
-    <p>For Apple, this settlement serves as a reminder that even a company that champions privacy must continuously improve its security measures.  
-    Moving forward, users can expect Apple to introduce stricter controls on Siri activations, clearer transparency policies, and more robust privacy settings.</p>
-
-    <h1>What Users Can Do to Protect Their Privacy</h1>
-
-    <p>If you are concerned about how Siri handles your data, here are a few steps to safeguard your privacy:</p>
-
-    <ul>
-        <li><strong>Review Siri Settings</strong> – Go to <strong>Settings > Siri & Search</strong> and adjust when Siri is allowed to listen.</li>
-        <li><strong>Disable Siri Recordings</strong> – Navigate to <strong>Settings > Privacy & Security > Analytics & Improvements</strong> and disable <strong>Improve Siri & Dictation</strong> to prevent Apple from using your recordings for analysis.</li>
-        <li><strong>Delete Siri History</strong> – You can manually delete stored Siri interactions by going to <strong>Settings > Siri & Search > Siri & Dictation History</strong> and tapping <strong>Delete Siri & Dictation History</strong>.</li>
-        <li><strong>Use Offline Mode</strong> – Consider using Siri’s on-device processing where possible, reducing the chances of data being sent to Apple servers.</li>
-    </ul>
-
-    <h1>Final Thoughts</h1>
-
-    <p>Apple’s $95 million Siri privacy settlement is a wake-up call not just for Apple but for all tech companies relying on AI-driven voice assistants.  
-    As virtual assistants become more embedded in our daily lives, ensuring robust privacy protections is essential.  
-    While Apple has taken steps to address these concerns, users should remain proactive in managing their digital privacy.</p>
-
-
-        </p>
-
-        <img src="" alt="" class="tweet-image" >
-
-    </div>
-
-    <div class="footer">
-        <p>Follow me on Instagram: <a href="https://www.instagram.com/h4cker.in" target="_blank">@h4cker.in</a></p>
+        <div class="footer">
+            <p>A official hacking forum of clayhackergroup</p>
+        </div>
     </div>
 
 </body>
-</html>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay Hacker Group Post</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #15202B;
-            color: #E1E8ED;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .tweet-card {
-            background: #192734;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-        }
-
-        .profile img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .profile h3, .profile p {
-            margin: 0;
-        }
-
-        .tweet-text {
-            font-size: 16px;
-            margin: 15px 0;
-        }
-
-        .tweet-image {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #1DA1F2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .tweet-card {
-                padding: 15px;
-            }
-
-            .profile img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .tweet-text {
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="tweet-card">
-        <div class="profile">
-            <img src="https://clayhackergroup.netlify.app/IMG_20240911_141041_910.jpg" alt="Clay Hacker Group">
-            <div>
-                <h3>Clay Group</h3>
-                <p>@h4cker.in · 1h</p>
-            </div>
-        </div>
-        
-        <p class="tweet-text">
-            <!-- Empty post content, user can add anything -->
-            <h1>The Biggest Crypto Hack of 2025: Bybit Loses $1.5 Billion</h1>
-
-<h2>Introduction</h2>
-<p>The cryptocurrency world has witnessed one of the largest hacks in its history. In February 2025, Dubai-based exchange <b>Bybit</b> suffered a security breach, losing <b>$1.5 billion</b> in Ethereum.</p>
-
-<h2>How the Attack Happened</h2>
-<p>Hackers exploited a vulnerability during a routine transfer from Bybit's <b>cold wallet</b> to a <b>warm wallet</b>. They manipulated the transaction logic, transferring <b>401,000 Ethereum</b> to an unknown address.</p>
-
-<h2>Who Is Behind the Attack?</h2>
-<p>Security experts suspect the <b>Lazarus Group</b>, a North Korean state-sponsored hacking group, known for previous high-profile crypto heists.</p>
-
-<h2>Bybit’s Response</h2>
-<p>Bybit CEO <b>Ben Zhou</b> assured users that all client funds remain backed 1:1. The company has launched an investigation and a <b>10% bounty program</b> for ethical hackers to help recover the stolen assets.</p>
-
-<h2>Implications for the Crypto Industry</h2>
-<p>This attack highlights security vulnerabilities in centralized exchanges and the need for better regulations, security measures, and decentralized alternatives.</p>
-
-<h2>Can the Stolen Funds Be Recovered?</h2>
-<p>Blockchain forensic firms are tracking the stolen Ethereum, but hackers may use <b>mixing services</b> and <b>DEXs</b> to launder the funds.</p>
-
-<h2>Conclusion</h2>
-<p>The Bybit hack of 2025 serves as a reminder of the risks in crypto. Stronger security, decentralization, and oversight are essential to prevent future breaches.</p>
-        </p>
-
-        <img src="download.png" alt="" class="tweet-image" >
-
-    </div>
-
-    <div class="footer">
-        <p>Follow me on Instagram: <a href="https://www.instagram.com/h4cker.in" target="_blank">@h4cker.in</a></p>
-    </div>
-
-</body>
-</html>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay Hacker Group Post</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #15202B;
-            color: #E1E8ED;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .tweet-card {
-            background: #192734;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-        }
-
-        .profile img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .profile h3, .profile p {
-            margin: 0;
-        }
-
-        .tweet-text {
-            font-size: 16px;
-            margin: 15px 0;
-        }
-
-        .tweet-image {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #1DA1F2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .tweet-card {
-                padding: 15px;
-            }
-
-            .profile img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .tweet-text {
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="tweet-card">
-        <div class="profile">
-            <img src="https://clayhackergroup.netlify.app/IMG_20240911_141041_910.jpg" alt="Clay Hacker Group">
-            <div>
-                <h3>Clay Group</h3>
-                <p>@h4cker.in · 1h</p>
-            </div>
-        </div>
-        
-        <p class="tweet-text">
-            <!-- Empty post content, user can add anything -->
-       <h1>Instagram Users Report Surge of Sensitive and Violent Content in Feeds</h1>
-
-<h2>February 26, 2025 – What Happened?</h2>
-<p>On February 26, 2025, Instagram users worldwide experienced an unexpected influx of sensitive, violent, and explicit content in their feeds, particularly in Reels. Many users took to social media, including X (formerly Twitter), to express concerns about seeing graphic videos involving fights, illegal activities, and other disturbing material—despite having their <strong>Sensitive Content Control</strong> settings turned on.</p>
-
-<h2>Possible Causes</h2>
-<p>While Meta (Instagram's parent company) has not yet issued an official statement, several theories are circulating about why this may have happened:</p>
-<ul>
-    <li><strong>Algorithm Malfunction:</strong> Instagram constantly updates its recommendation algorithms, and a recent tweak may have mistakenly amplified sensitive content to a broader audience.</li>
-    <li><strong>Content Moderation Failure:</strong> Instagram relies on AI-based moderation to filter out inappropriate content. A temporary failure in this system could have allowed restricted content to bypass safety controls.</li>
-    <li><strong>Mass Reporting Glitch:</strong> Some reports suggest that when many users report a video, Instagram sometimes mistakenly pushes it to more people instead of removing it immediately.</li>
-    <li><strong>Exploit or Hack:</strong> Some cybersecurity analysts speculate that bad actors might have found a way to manipulate Instagram’s recommendation system to force sensitive content into users' feeds.</li>
-</ul>
-
-<h2>User Reactions</h2>
-<p>Many Instagram users voiced frustration over the sudden appearance of inappropriate videos. Common complaints included:</p>
-<ul>
-    <li>Seeing violent and explicit content despite personal content restrictions.</li>
-    <li>No option to permanently remove certain types of videos from their feeds.</li>
-    <li>Instagram’s "Not Interested" option not working effectively.</li>
-</ul>
-
-<p>One user on X tweeted:<br>
-<em>"I opened Instagram, and my entire feed was filled with fight videos and graphic content. What is happening?"</em></p>
-
-<p>Another user commented:<br>
-<em>"Even with my content filter set to 'Less,' I'm getting disturbing Reels. Instagram needs to fix this ASAP."</em></p>
-
-<h2>What You Can Do</h2>
-<p>If you're experiencing this issue, here are some steps to regain control of your feed:</p>
-<ul>
-    <li><strong>Report the Content:</strong> Tap the three dots on the Reel and select <strong>"Report"</strong> to flag inappropriate videos.</li>
-    <li><strong>Use 'Not Interested':</strong> If a Reel appears that you don’t want to see, hold down on the video and tap <strong>"Not Interested"</strong> to adjust recommendations.</li>
-    <li><strong>Clear Search and Watch History:</strong> Go to <strong>Settings &gt; Your Activity &gt; Recent Searches</strong> and clear all history to reset your algorithm preferences.</li>
-    <li><strong>Check Your Sensitive Content Control:</strong> Navigate to <strong>Settings &gt; Privacy &gt; Sensitive Content Control</strong> and ensure it’s set to <strong>Less</strong> or <strong>Limit Even More</strong> (for users under 18).</li>
-    <li><strong>Logout and Login Again:</strong> Sometimes, refreshing your account by logging out and back in can reset content recommendations.</li>
-</ul>
-
-<h2>Meta's Response</h2>
-<p>As of now, Meta has not provided an official response or explanation for the issue. However, users are advised to stay updated through Instagram's <strong>official support channels</strong> and social media announcements.</p>
-
-<h2>Final Thoughts</h2>
-<p>This incident raises questions about Instagram’s ability to moderate content effectively. If this was a glitch, it highlights potential flaws in Meta’s AI-based content filtering system. If it was an exploit, Instagram may need to patch vulnerabilities in its algorithm to prevent misuse.</p>
-
-<p>For now, users should be cautious and proactive in managing their feeds while waiting for an official fix from Instagram.</p> 
-        </p>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="" class="tweet-image" >
-
-    </div>
-
-    <div class="footer">
-        <p>Follow me on Instagram: <a href="https://www.instagram.com/h4cker.in" target="_blank">@h4cker.in</a></p>
-    </div>
-
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay Hacker Group Post</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #15202B;
-            color: #E1E8ED;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .tweet-card {
-            background: #192734;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-        }
-
-        .profile img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .profile h3, .profile p {
-            margin: 0;
-        }
-
-        .tweet-text {
-            font-size: 16px;
-            margin: 15px 0;
-        }
-
-        .tweet-image {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #1DA1F2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .tweet-card {
-                padding: 15px;
-            }
-
-            .profile img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .tweet-text {
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="tweet-card">
-        <div class="profile">
-            <img src="https://clayhackergroup.netlify.app/IMG_20240911_141041_910.jpg" alt="Clay Hacker Group">
-            <div>
-                <h3>Clay Group</h3>
-                <p>@h4cker.in · 1h</p>
-            </div>
-        </div>
-        
-        <p class="tweet-text">
-            <!-- Empty post content, user can add anything -->
-            <h1>Belarus-Linked Ghostwriter Uses Macropack-Obfuscated Excel Macros to Deploy Malware</h1>
-
-<p>Cybersecurity researchers have identified a new campaign by the Belarus-linked hacking group Ghostwriter. The attackers are using obfuscated Excel macros to distribute malware, making it harder for security solutions to detect the threats.</p>
-
-<h1>How the Attack Works</h1>
-
-<p>The attack involves multiple stages, leveraging malicious Excel files to deliver malware:</p>
-
-<li>The hackers send phishing emails containing Excel attachments.</li>
-<li>These Excel files include macros obfuscated using Macropack, a tool designed to bypass security detection.</li>
-<li>When users enable macros, the hidden payload executes and installs malware on the victim’s system.</li>
-
-<h1>Purpose of the Attack</h1>
-
-<p>The primary objectives of this malware campaign include:</p>
-
-<li>Stealing sensitive information from compromised systems.</li>
-<li>Gaining persistent access to government and corporate networks.</li>
-<li>Executing espionage operations targeting NATO-aligned countries.</li>
-
-<h1>Why This Attack is Dangerous</h1>
-
-<p>The use of Macropack makes the malicious macros more difficult to detect and analyze. Key threats include:</p>
-
-<li>Bypassing traditional security tools that detect standard macro-based attacks.</li>
-<li>Spreading malware rapidly through phishing campaigns.</li>
-<li>Enabling long-term espionage by maintaining access to infected networks.</li>
-
-<h1>How to Protect Against This Threat</h1>
-
-<p>Cybersecurity experts recommend the following protective measures:</p>
-
-<li>Avoid enabling macros in Excel files from unknown sources.</li>
-<li>Use endpoint detection and response (EDR) solutions to identify and block malicious macros.</li>
-<li>Educate employees about phishing techniques and email security best practices.</li>
-
-<p>As cyber threats continue to evolve, organizations must remain vigilant and implement robust security measures to defend against sophisticated attacks like those carried out by Ghostwriter.</p>
-        
-        </p>
-
-        <img src="microsoftexcelmalware.png" alt="" class="tweet-image" >
-
-    </div>
-
-    <div class="footer">
-        <p>Follow me on Instagram: <a href="https://www.instagram.com/h4cker.in" target="_blank">@h4cker.in</a></p>
-    </div>
-
-</body>
-</html>
