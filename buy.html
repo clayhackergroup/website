@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        h2 {
+            color: #f7931a;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buy-btn {
+            background-color: #f7931a;
+            color: white;
+        }
+        .back-btn {
+            background-color: #888;
+            color: white;
+        }
+        .countdown {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #f7931a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Payment Details</h2>
+        <p><strong>Bitcoins:</strong> </p>
+        <p><strong>Amount:</strong> price of matket</p>
+        <p><strong>Network:</strong> Bitcoin and more</p>
+        <p></p>
+    
+        
+        <br><br>
+        <button class="btn buy-btn" onclick="startCountdown()">Buy Now</button>
+        <button class="btn back-btn" onclick="goBack()">Back</button>
+        
+        <p class="countdown" id="countdown"></p>
+    </div>
+
+    <script>
+        function startCountdown() {
+            let countdownElement = document.getElementById("countdown");
+            let seconds = 10;
+            
+            let countdownInterval = setInterval(() => {
+                countdownElement.innerText = "Redirecting in " + seconds + " seconds...";
+                seconds--;
+
+                if (seconds < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "https://t.me/claysecure22";
+                }
+            }, 1000);
+        }
+
+        function goBack() {
+            window.location.href = "market.html";
+        }
+    </script>
+
+</body>
+</html>
