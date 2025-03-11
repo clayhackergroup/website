@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clay's Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clay's Market</h1>
+        <input type="text" id="searchBar" placeholder="Search for products..." onkeyup="searchProducts()">
+    </header>
+
+    <div class="product-container">
+        <div class="product" data-name="vasantrao naik krushi vidhypith">
+            <img src="vnmkv.png" alt="vasantrao naik ">
+            <div class="product-details">
+                <h2>vasantrao naik reushe vidhya pith parbhani </h2>
+                <p>1gb data email, number , name , address, age   site vnmkv.ac.in</p>
+                <span class="price">$10</span>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="DSM collage dnyanopasak collage">
+            <img src="dsm.png" alt="Smartphone">
+            <div class="product-details">
+                <h2>DSM collage parbhani Database </h2>
+                <p>Data including name, email , number , cast , pancards and important documents. https://dnyanopasak.org.in</p>
+                <span class="price">5$</span>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="savitri bai phule unvercity pune">
+            <img src="sb.png" alt="Headphones">
+            <div class="product-details">
+                <h2>savitri bai phule  unervercity pune</h2>
+                <p>Data including emails, number , name , pancards, card details,importantnotices and olans  . http://www.unipune.ac.in/</p>
+                <span class="price">$55</span>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+  
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  background: linear-gradient(90deg, #222, #444);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+#searchBar {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.product {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-details {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.buy-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.buy-btn:hover {
+  background: darkred;
+}
+</style>
+
+
+<script>function searchProducts() {
+let input = document.getElementById("searchBar").value.toLowerCase();
+let products = document.querySelectorAll(".product");
+
+products.forEach(product => {
+let name = product.getAttribute("data-name").toLowerCase();
+if (name.includes(input)) {
+product.style.display = "block";
+} else {
+product.style.display = "none";
+}
+});
+}</script>
