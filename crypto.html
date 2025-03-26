@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clay Crypto Exchange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-in">Welcome to Clay Crypto Exchange</h1>
+        <p class="slide-up">Securely exchange your cryptocurrency with ease.</p>
+
+        <div class="crypto-box">
+            <select id="cryptoSelect">
+                <option value="Bitcoin">Bitcoin</option>
+                <option value="Ethereum">Ethereum</option>
+                <option value="USDT">USDT</option>
+            </select>
+            <input type="number" id="amount" placeholder="Enter Amount">
+        </div>
+
+        <button class="exchange-btn bounce" onclick="redirectToTelegram()">Exchange Crypto</button>
+
+        <!-- Payment Options Section -->
+        <div class="payment-options">
+            <h2>Available Payment Options</h2>
+            <ul>
+                <li> UPI (Google Pay, PhonePe, Paytm)</li>
+                <li> PayPal</li>
+                <li>Crypto Wallets (BTC, ETH, USDT)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 100px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.crypto-box {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.exchange-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.exchange-btn:hover {
+    transform: scale(1.1);
+    background: #e74c3c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.bounce {
+    animation: bounce 1.5s infinite;
+}
+  
+  .payment-options {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.payment-options h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.payment-options ul {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-options li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+</style>
+
+
+
+<script>
+  
+  
+  .payment - options {
+    margin - top: 40 px;
+    padding: 20 px;
+    background: rgba(255, 255, 255, 0.1);
+    border - radius: 10 px;
+    display: inline - block;
+    text - align: left;
+  }
+
+  .payment - options h2 {
+    font - size: 1.5 rem;
+    text - align: center;
+  }
+
+  .payment - options ul {
+    list - style: none;
+    padding: 0;
+  }
+
+  .payment - options li {
+    font - size: 1.2 rem;
+    margin: 10 px 0;
+  }
+</script>
