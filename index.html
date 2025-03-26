@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clay Hacker Group Official Site</title>
-        <!-- SEO Meta Tags -->
-<head>
-    <title>Clay Hacker Group </title>
+
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Clay Hacker Group is an underground cybersecurity team specializing in ethical hacking, cybersecurity research, and penetration testing. Join us now!">
     <meta name="keywords" content="Clay Hacker Group, ethical hacking, cybersecurity, penetration testing, hacker forum, hacking services">
     <meta name="author" content="Clay Hacker Group">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+
+    <!-- Open Graph for Better Social Previews -->
+    <meta property="og:title" content="Clay Hacker Group Official Site">
+    <meta property="og:description" content="Join Clay Hacker Group for ethical hacking, cybersecurity research, and penetration testing.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Favicon -->
     <link rel="icon" href="logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -26,10 +32,10 @@
 
         body {
             background: black;
-            
             text-align: center;
             overflow-x: hidden;
         }
+
         canvas {
             position: fixed;
             top: 0;
@@ -88,67 +94,21 @@
             display: block;
             font-weight: bold;
             border: 3px solid #00ff00;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
 
-        /* Instagram Button */
-        .btn-instagram {
-            border-color: #feda75;
-            color: #feda75;
-        }
-
-        /* Telegram Button */
-        .btn-telegram {
-            border-color: #0088cc;
-            color: #0088cc;
-        }
-
-        /* GitHub Button */
-        .btn-github {
-            border-color: white;
-            color: white;
-        }
-
-        /* Hire a Hacker Button */
-        .btn-hacker {
-            border-color: red;
-            color: red;
-        }
-
-        /* More Info Button */
-        .btn-info {
-            border-color: yellow;
-            color: yellow;
-        }
-
-        /* View Posts Button */
-        .btn-posts {
-            border-color: cyan;
-            color: cyan;
-        }
-
-        /* Hacking Forum Button */
-        .btn-forum {
-            border-color: purple;
-            color: purple;
-        }
-
-        /* Discord Button */
-        .btn-discord {
-            border-color: #5865F2;
-            color: #5865F2;
-        }
-
-        /* Join Us Button */
-        .btn-join {
-            border-color: lime;
-            color: lime;
-        }
-
-        /* Market Button */
-        .btn-market {
-            border-color: orange;
-            color: orange;
-        }
+        /* Button Styles */
+        .btn-instagram { border-color: #feda75; color: #feda75; }
+        .btn-telegram { border-color: #0088cc; color: #0088cc; }
+        .btn-github { border-color: white; color: white; }
+        .btn-hacker { border-color: red; color: red; }
+        .btn-info { border-color: yellow; color: yellow; }
+        .btn-posts { border-color: cyan; color: cyan; }
+        .btn-forum { border-color: purple; color: purple; }
+        .btn-discord { border-color: #5865F2; color: #5865F2; }
+        .btn-join { border-color: lime; color: lime; }
+        .btn-market { border-color: orange; color: orange; }
+        .btn-crypto { border-color: #ff9900; color: #ff9900; } /* Crypto Exchange Button */
 
         .btn:hover {
             box-shadow: 0 0 15px currentColor;
@@ -163,7 +123,8 @@
     </style>
 </head>
 <body>
- <!-- Background Animation -->
+
+    <!-- Background Animation -->
     <canvas id="bg"></canvas>
 
     <div class="container">
@@ -183,6 +144,7 @@
             <a href="https://discord.gg/g3aEJbUC" class="btn btn-discord" target="_blank">10. Discord</a>
             <a href="form.html" class="btn btn-join" target="_blank">11. Join Us</a>
             <a href="market.html" class="btn btn-market">12. Market</a>
+            <a href="crypto.html" class="btn btn-crypto">13. Crypto Exchange</a>
         </div>
 
         <div class="footer">
@@ -190,91 +152,45 @@
         </div>
     </div>
 
+    <script>
+        const canvas = document.getElementById("bg");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const nodes = [];
+        const maxNodes = 100;
+
+        function createNode() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 3 + 1,
+                dx: (Math.random() * 1 - 0.5) * 0.6,
+                dy: (Math.random() * 1 - 0.5) * 0.6
+            };
+        }
+
+        for (let i = 0; i < maxNodes; i++) nodes.push(createNode());
+
+        function drawNodes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#00ff00";
+
+            nodes.forEach(node => {
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        function animate() {
+            drawNodes();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
 </body>
 </html>
-
-
-<script>
-  
-  
-  
-  const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const nodes = [];
-const maxNodes = 100;
-
-function createNode() {
-  return {
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    radius: Math.random() * 3 + 1,
-    dx: (Math.random() * 1 - 0.5) * 0.6, // Slower movement
-    dy: (Math.random() * 1 - 0.5) * 0.6 // Slower movement
-  };
-}
-
-for (let i = 0; i < maxNodes; i++) {
-  nodes.push(createNode());
-}
-
-function drawNodes() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#00ff00"; // Green dots
-
-  nodes.forEach(node => {
-    ctx.beginPath();
-    ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  drawLines();
-}
-
-function drawLines() {
-  ctx.strokeStyle = "rgba(135, 206, 250, 0.5)"; // Sky blue lines
-  ctx.lineWidth = 1.2;
-
-  for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const dx = nodes[i].x - nodes[j].x;
-      const dy = nodes[i].y - nodes[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < 100) {
-        ctx.beginPath();
-        ctx.moveTo(nodes[i].x, nodes[i].y);
-        ctx.lineTo(nodes[j].x, nodes[j].y);
-        ctx.stroke();
-      }
-    }
-  }
-}
-
-function updateNodes() {
-  nodes.forEach(node => {
-    node.x += node.dx;
-    node.y += node.dy;
-
-    if (node.x < 0 || node.x > canvas.width) node.dx *= -1;
-    if (node.y < 0 || node.y > canvas.height) node.dy *= -1;
-  });
-}
-
-function animate() {
-  drawNodes();
-  updateNodes();
-  requestAnimationFrame(animate);
-}
-
-animate();
-
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-</script>
-
