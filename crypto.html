@@ -163,3 +163,22 @@ input, select {
     margin: 10 px 0;
   }
 </script>
+
+<script>
+    function redirectToTelegram() {
+    let crypto = document.getElementById("cryptoSelect").value;
+    let amount = document.getElementById("amount").value;
+
+    if (amount === "") {
+        amount = "Enter your amount";  // Default message if no amount is entered
+    }
+
+    let message = `Hello, I want to exchange ${amount} ${crypto}. What are the next steps?`;
+    let telegramUsername = "claysecure22";  // Your Telegram username
+    let telegramLink = `https://t.me/${telegramUsername}?text=${encodeURIComponent(message)}`;
+
+    window.location.href = telegramLink;
+}
+</script>
+
+
